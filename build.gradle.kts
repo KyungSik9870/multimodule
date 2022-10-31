@@ -1,5 +1,4 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
     id("org.springframework.boot") version "2.6.3"
@@ -34,7 +33,6 @@ subprojects {
 
     dependencies {
         //spring boot
-        implementation("org.springframework.boot:spring-boot-starter-data-jpa")
         implementation("org.springframework.boot:spring-boot-starter-security")
         implementation("org.springframework.boot:spring-boot-starter-web")
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
@@ -44,13 +42,7 @@ subprojects {
         implementation("org.jetbrains.kotlin:kotlin-reflect")
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
-        //lombok
-        compileOnly("org.projectlombok:lombok")
-        annotationProcessor("org.projectlombok:lombok")
-
-        //DB connect
-        runtimeOnly("com.h2database:h2")
-        runtimeOnly("mysql:mysql-connector-java")
+        implementation("io.github.microutils:kotlin-logging:1.7.9")
 
         //test
         testImplementation("org.springframework.boot:spring-boot-starter-test")

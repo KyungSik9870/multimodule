@@ -20,4 +20,9 @@ class StockService(
             .let { StockResponses.of(it) }
     }
 
+
+    fun call() {
+        // TODO : 주식정보 받아오는 client call
+        //  error -> response return / catch -> Handling
+    }
 }

@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: local
+
+
+---
+spring:
+  profiles:
+    active: sandbox
+
+---
+spring:
+  profiles:
+    active: beta
+
+---
+spring:
+  profiles:
+    active: production
+    
